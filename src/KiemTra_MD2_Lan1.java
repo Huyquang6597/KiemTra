@@ -32,6 +32,7 @@ public class KiemTra_MD2_Lan1 {
         System.out.println("Nhap vao so can xoa: ");
         int soCanXoa = scanner.nextInt();
         int viTriCanXoa = timViTriPhanTu(mang, soCanXoa);
+        //xoa
         int[] newArr = new int[mang.length-1];
         for (int i=0; i<viTriCanXoa; i++) {
             newArr[i] = mang[i];
