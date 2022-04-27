@@ -1,5 +1,7 @@
 package directory;
 
+import java.io.*;
+import java.util.List;
 import java.util.Scanner;
 
 public class Menu {
@@ -8,7 +10,7 @@ public class Menu {
     int choice;
     Scanner scanner = new Scanner(System.in);
 
-    public void menuMain() {
+    public void menuMain() throws IOException {
         str = """  
                  ==================Menu================== |
                  ---------------------------------------- |
@@ -44,7 +46,7 @@ public class Menu {
                 menuFindByName();
                 break;
             case 6:
-
+                menuReadToFile();
                 break;
             case 7:
                 break;
@@ -54,16 +56,15 @@ public class Menu {
         }
     }
 
-    public void menuDisplay() {
+    public void menuDisplay() throws IOException {
         directoryManager.display();
         menuMain();
     }
 
-    public void menuAdd() {
+    public void menuAdd() throws IOException {
         System.out.println("Nhap vao ten: ");
         scanner.nextLine();
         String name = scanner.nextLine();
-
         System.out.println("Nhap vao Sdt");
         String number = scanner.nextLine();
         System.out.println("Nhap vao dia chi");
@@ -73,7 +74,7 @@ public class Menu {
         menuMain();
     }
 
-    public void menuEdit() {
+    public void menuEdit() throws IOException {
         System.out.println("Nhap vao ten muon sua: ");
         scanner.nextLine();
         String editName = scanner.nextLine();
@@ -86,35 +87,48 @@ public class Menu {
             System.out.println("Nhap dia chi");
             String address = scanner.nextLine();
             directoryManager.edit(editName, new User(name, number, address));
-            directoryManager.display();
+            menuMain();
         } else {
             System.out.println("Khong co!");
         }
         menuMain();
     }
 
-    public void menuDelete() {
+    public void menuDelete() throws IOException {
         System.out.println("Nhap ten muon xoa: ");
         scanner.nextLine();
-
         String name = scanner.nextLine();
         directoryManager.delete(name);
         menuMain();
 
     }
 
-    public void menuFindByName() {
+    public void menuFindByName() throws IOException {
         System.out.println("Nhap vao ten muon tim kiem: ");
         scanner.nextLine();
         String name = scanner.nextLine();
         int a = directoryManager.findByName(name);
         if (a != -1) {
             System.out.println(directoryManager.userList.get(a));
-
         } else {
             System.out.println("Khong co");
         }
 
         menuMain();
+    }
+
+    public void menuReadToFile( ) throws IOException {
+
+        File inputFile = new File("inputFile.csv");
+        inputFile.createNewFile();
+        File outputFile = new File("outputFile.csv");
+        outputFile.createNewFile();
+        File path = new File("inputFile.csv");
+        String line = "";
+        try(BufferedReader br = new BufferedReader(new FileReader(path))) {
+
+        }
+
+
     }
 }
