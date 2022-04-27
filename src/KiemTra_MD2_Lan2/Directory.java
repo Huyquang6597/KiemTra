@@ -1,29 +1,30 @@
 package KiemTra_MD2_Lan2;
 
-import java.util.Scanner;
+import java.util.Date;
 
 public class Directory {
-    private int number;
-    private String groupContact;
+    private int id;
     private String name;
+    private int number;
     private String gender;
     private String address;
-    private int dateOfBirth;
-    private String email;
-    private int id;
+    private String dateOfBirth;
+//    private String groupContact;
+//    private String email;
+
 
     public Directory() {
     }
 
-    public Directory(int number, String groupContact, String name, String gender, String address, int dateOfBirth, String email , int id) {
-        this.number = number;
-        this.groupContact = groupContact;
+    public Directory(int id, String name, int number, String gender, String address, String dateOfBirth) {
+        this.id = id;
         this.name = name;
+        this.number = number;
         this.gender = gender;
         this.address = address;
         this.dateOfBirth = dateOfBirth;
-        this.email = email;
-        this.id = id;
+//        this.groupContact = groupContact;
+//        this.email = email;
     }
 
     public int getNumber() {
@@ -34,13 +35,13 @@ public class Directory {
         this.number = number;
     }
 
-    public String getGroupContact() {
-        return groupContact;
-    }
-
-    public void setGroupContact(String groupContact) {
-        this.groupContact = groupContact;
-    }
+//    public String getGroupContact() {
+//        return groupContact;
+//    }
+//
+//    public void setGroupContact(String groupContact) {
+//        this.groupContact = groupContact;
+//    }
 
     public String getName() {
         return name;
@@ -66,21 +67,21 @@ public class Directory {
         this.address = address;
     }
 
-    public int getDateOfBirth() {
+    public String getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(int dateOfBirth) {
+    public void setDateOfBirth(String dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
+//    public String getEmail() {
+//        return email;
+//    }
+//
+//    public void setEmail(String email) {
+//        this.email = email;
+//    }
 
     public int getId() {
         return id;
@@ -95,12 +96,10 @@ public class Directory {
     public String toString() {
         return "Directory{" +
                 "So DT: " + number +
-                ", Nhom: '" + groupContact + '\'' +
                 ", Ho Ten: '" + name + '\'' +
                 ", Gioi Tinh: '" + gender + '\'' +
                 ", Dia Chi:     '" + address + '\'' +
                 ", dateOfBirth=" + dateOfBirth +
-                ", email='" + email + '\'' +
                 '}';
     }
 }

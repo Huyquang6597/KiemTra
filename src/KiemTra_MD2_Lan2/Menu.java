@@ -5,35 +5,36 @@ import java.util.Scanner;
 public class Menu {
     String str = "";
     int choice;
-    public void menuMain(){
-        Scanner scanner  = new Scanner(System.in);
 
+    public void menuMain() {
+        Scanner scanner = new Scanner(System.in);
+        DirectoryManagement directoryManagement = new DirectoryManagement();
         int choice = -1;
 
-        while (choice != 0){
+        while (choice != 0) {
             str = """
-                ==================Menu================== |
-                1 .Xem danh sach                         |
-                2. Them moi                              |
-                3. Cap nhap                              |
-                4. Xoa                                   |
-                5. Tim kiem                              |
-                6. Doc tu file                           |
-                7. Ghi vao file                          |
-                8. Thoat                                 |
-                                                         |
-                 Nhap vao lua chon tu 1-7, 8 de thoat    |
-                                                         |
-                """;
+                    ==================Menu================== |
+                    1 .Xem danh sach                         |
+                    2. Them moi                              |
+                    3. Cap nhap                              |
+                    4. Xoa                                   |
+                    5. Tim kiem                              |
+                    6. Doc tu file                           |
+                    7. Ghi vao file                          |
+                    8. Thoat                                 |
+                                                             |
+                     Nhap vao lua chon tu 1-7, 8 de thoat    |
+                                                             |
+                    """;
 
             try {
                 choice = scanner.nextInt();
-            } catch (Exception e){
+            } catch (Exception e) {
                 System.out.println("Chi duoc nhap so!");
                 scanner.nextLine();
                 choice = -1;
             }
-            switch (choice){
+            switch (choice) {
                 case 1:
                     System.out.println("Xem danh sach");
                     System.out.println("Nhap Id: ");
@@ -42,6 +43,14 @@ public class Menu {
                     String name = scanner.nextLine();
                     System.out.println("Nhap vao so dien thoai");
                     int number = scanner.nextInt();
+                    System.out.println("Gioi tinh: ");
+                    String gender = scanner.nextLine();
+                    System.out.println("Dia chi: ");
+                    String address = scanner.nextLine();
+                    System.out.println("Nhap vao ngay sinh: ");
+                    String dateOfBirth = scanner.nextLine();
+                    Directory menu1 = new Directory(id, name, number, gender, address, dateOfBirth);
+                    directoryManagement.add(menu1);
                     break;
                 case 2:
                     System.out.println("Them moi");
