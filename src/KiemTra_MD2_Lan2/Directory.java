@@ -1,5 +1,7 @@
 package KiemTra_MD2_Lan2;
 
+import java.util.Scanner;
+
 public class Directory {
     private int number;
     private String groupContact;
@@ -87,6 +89,7 @@ public class Directory {
     public void setId(int id) {
         this.id = id;
     }
+
 
     @Override
     public String toString() {

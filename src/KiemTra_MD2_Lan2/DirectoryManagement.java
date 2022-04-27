@@ -22,18 +22,22 @@ public class DirectoryManagement implements Manager<Directory> {
         int indexOfDirectory = findById(number);
         if (indexOfDirectory == -1) {
             System.out.println("Khong co trong danh ba!");
-        } else {
+        }
+//        else if (Integer.parseInt(number)== null){
+//            menu.menuMain();
+//        }
+        else {
             directories.set(indexOfDirectory, directory);
         }
     }
 
 
     @Override
-    public void delete(int id) {
-        if (findById(id) != -1) {
+    public void delete(int  number) {
+        if (findByNumber(number) != -1) {
             System.out.println("Ban co muon xoa khong ? \n Y/N");
             if (directories.equals("Y")) {
-                directories.remove(findById(id));
+                directories.remove(findById(number));
             } else if (directories.equals("N")) {
                 System.out.println("Tam biet");
                 menu.menuMain();
@@ -79,7 +83,15 @@ public class DirectoryManagement implements Manager<Directory> {
     }
 
     @Override
-    public Directory findByName(String name) {
-        return null;
+    public int findByName(String name) {
+       for (int i = 0 ; i <directories.size();i++){
+           if(directories.get(i).getName().equals(name)){
+               System.out.println(directories.get(i));
+               return i;
+           }
+       }
+        return  -1;
     }
-}
+       }
+
+

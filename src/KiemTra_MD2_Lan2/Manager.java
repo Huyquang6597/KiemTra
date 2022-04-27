@@ -8,5 +8,5 @@ public interface Manager<T> {
     int findById(int id);
     int findByNumber(int number);
     void exit();
-    T findByName(String name);
+    int findByName(String name);
 }

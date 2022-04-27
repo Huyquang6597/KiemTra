@@ -35,6 +35,32 @@ public class Menu {
             }
             switch (choice){
                 case 1:
+                    System.out.println("Xem danh sach");
+                    System.out.println("Nhap Id: ");
+                    int id = scanner.nextInt();
+                    System.out.println("Nhap vao ten: ");
+                    String name = scanner.nextLine();
+                    System.out.println("Nhap vao so dien thoai");
+                    int number = scanner.nextInt();
+                    break;
+                case 2:
+                    System.out.println("Them moi");
+                    break;
+                case 3:
+                    System.out.println("Cap nhap");
+                    break;
+                case 4:
+                    System.out.println("Xoa");
+                    break;
+                case 5:
+                    System.out.println("Tim kiem");
+                    break;
+                case 6:
+                    System.out.println("Doc tu file");
+                    break;
+                case 7:
+                    System.out.println("Ghi vao file");
+                    break;
 
             }
         }
