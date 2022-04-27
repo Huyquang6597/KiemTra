@@ -5,6 +5,7 @@ import java.util.List;
 
 public class DirectoryManagement implements Manager<Directory> {
     private List<Directory> directories = new ArrayList<>();
+    private int size = 0;
     Menu menu = new Menu();
 
     public DirectoryManagement() {
@@ -17,8 +18,13 @@ public class DirectoryManagement implements Manager<Directory> {
     }
 
     @Override
-    public void edit(String name, Directory directory) {
-
+    public void edit(int number, Directory directory) {
+        int indexOfDirectory = findById(number);
+        if (indexOfDirectory == -1) {
+            System.out.println("Khong co trong danh ba!");
+        } else {
+            directories.set(indexOfDirectory, directory);
+        }
     }
 
 
@@ -51,6 +57,16 @@ public class DirectoryManagement implements Manager<Directory> {
     public int findById(int id) {
         for (int i = 0; i < directories.size(); i++) {
             if (directories.get(i).getId() == id) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    @Override
+    public int findByNumber(int number) {
+        for (int i = 0; i < directories.size(); i++) {
+            if (directories.get(i).getNumber() == number) {
                 return i;
             }
         }

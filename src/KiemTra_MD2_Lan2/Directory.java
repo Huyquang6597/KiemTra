@@ -95,7 +95,7 @@ public class Directory {
                 ", Nhom: '" + groupContact + '\'' +
                 ", Ho Ten: '" + name + '\'' +
                 ", Gioi Tinh: '" + gender + '\'' +
-                ", Dia Chi: '" + address + '\'' +
+                ", Dia Chi:     '" + address + '\'' +
                 ", dateOfBirth=" + dateOfBirth +
                 ", email='" + email + '\'' +
                 '}';
