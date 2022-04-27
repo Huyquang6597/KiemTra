@@ -50,11 +50,6 @@ public class User {
 
     @Override
     public String toString() {
-        return "Directory.User{" +
-                "name='" + name + '\'' +
-                ", number='" + number + '\'' +
-                ", address='" + address + '\'' +
-                ", id=" + id +
-                '}';
+        return "Directory.User{" + "Ten: '" + name + '\'' + ", So DT'" + number + '\'' + ", Dia chi: '" + address + '\'' + ", ID: " + id + '}';
     }
 }

@@ -10,18 +10,20 @@ public class Menu {
 
     public void menuMain() {
         str = """  
-                    ==================Menu================== |
-                    1 .Xem danh sach                         |
-                    2. Them moi                              |
-                    3. Cap nhap                              |
-                    4. Xoa                                   |
-                    5. Tim kiem                              |
-                    6. Doc tu file                           |
-                    7. Ghi vao file                          |
-                    8. Thoat                                 |
-                                                             |
-                     Nhap vao lua chon tu 1-7, 8 de thoat    |
-                                                             |
+                 ==================Menu================== |
+                 ---------------------------------------- |
+                 1 .Xem danh sach                         |
+                 2. Them moi                              |
+                 3. Cap nhap                              |
+                 4. Xoa                                   |
+                 5. Tim kiem                              |
+                 6. Doc tu file                           |
+                 7. Ghi vao file                          |
+                 8. Thoat                                 |
+                                                          |
+                 Nhap vao lua chon tu 1-7, 8 de thoat     |
+                                                          |
+                ==========================================|
                 """;
         System.out.println(str);
         choice = scanner.nextInt();
@@ -97,7 +99,7 @@ public class Menu {
 
         String name = scanner.nextLine();
         directoryManager.delete(name);
-        directoryManager.display();
+        menuMain();
 
     }
 
