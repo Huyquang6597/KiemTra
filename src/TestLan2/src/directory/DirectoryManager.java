@@ -5,7 +5,14 @@ import java.util.List;
 
 public class DirectoryManager implements Manager<User> {
     List<User> userList = new ArrayList<>();
+//    User user = new User();
     int id = 0;
+
+    public DirectoryManager(){
+//        userList.add(new User("Kiên","0123456654","Bạn Học", "Nam", "Thái Nguyên","kien@gmail.com","23/4/1998"));
+//        userList.add(new User("Huy","0187458992","Bạn Học", "Nam", "Hà Nội","khun@gmail.com","13/5/1997"));
+//        userList.add(new User("Hùng","0127258393","Bạn Học", "Nam", "Thanh Hóa","sgn@gmail.com","25/3/1992"));
+    }
 
     @Override
     public void add(User user) {

@@ -3,6 +3,7 @@ package directory2;
 public class User2 {
     private String name;
     private String phoneNumber;
+    private String group;
     private String gender;
     private String address;
     private String dateOfBirth;
@@ -12,9 +13,10 @@ public class User2 {
     public User2() {
     }
 
-    public User2(String name, String phoneNumber, String gender, String address, String dateOfBirth,String email) {
+    public User2(String name, String phoneNumber, String group, String gender, String address, String dateOfBirth,String email) {
         this.name = name;
         this.phoneNumber = phoneNumber;
+        this.group = group;
         this.gender = gender;
         this.address = address;
         this.dateOfBirth = dateOfBirth;
@@ -23,6 +25,13 @@ public class User2 {
     }
 
 
+    public String getGroup() {
+        return group;
+    }
+
+    public void setGroup(String group) {
+        this.group = group;
+    }
 
     public String getName() {
         return name;

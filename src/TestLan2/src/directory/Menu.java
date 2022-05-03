@@ -119,11 +119,11 @@ public class Menu {
 
     public void menuReadToFile( ) throws IOException {
 
-        File inputFile = new File("inputFile.csv");
+        File inputFile = new File("/Users/tranquanghuy/Desktop/CODEGYM - Bài tập/KiemTra/src/TestLan2/inputFile.csv");
         inputFile.createNewFile();
-        File outputFile = new File("outputFile.csv");
+        File outputFile = new File("/Users/tranquanghuy/Desktop/CODEGYM - Bài tập/KiemTra/src/TestLan2/outputFile.csv");
         outputFile.createNewFile();
-        File path = new File("inputFile.csv");
+        File path = new File("/Users/tranquanghuy/Desktop/CODEGYM - Bài tập/KiemTra/src/TestLan2/inputFile.csv");
         String line = "";
         try(BufferedReader br = new BufferedReader(new FileReader(path))) {
 
